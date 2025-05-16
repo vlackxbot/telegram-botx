@@ -88,9 +88,7 @@ async def spin(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_data[user.id] = {'balance': won_amount, 'referrals': 0, 'upi': None}
 
     await context.bot.send_message(chat_id=chat_id,
-        text=f"🎉 Congratulations! You won Rs.{won_amount}."
-
-Minimum withdrawal is Rs.100. Refer friends to earn more.",
+        text=f"🎉 Congratulations! You won Rs.{won_amount}.\n\nMinimum withdrawal is Rs.100. Refer friends to earn more.",
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("💸 Withdraw", callback_data="withdraw")],
             [InlineKeyboardButton("📢 Refer Friends", callback_data="refer")]
